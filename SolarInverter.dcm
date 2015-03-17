@@ -1,0 +1,54 @@
+EESchema-DOCLIB  Version 2.0  Date: 29-01-2015 10:12:17
+#
+$CMP AD8552
+D Dual Voltage Comparator
+K Comp
+$ENDCMP
+#
+$CMP ADM2484E
+D ADM2484E
+$ENDCMP
+#
+$CMP CONNECTOR2PIN
+D Connector 2 Pin
+$ENDCMP
+#
+$CMP CONNECTOR3PIN
+D Connector 3 Pin
+$ENDCMP
+#
+$CMP LM317MDTUPDATE
+D LM317MDT, 0.5A 35V Adjustable Linear Regulator, TO-252
+K Adjustable Voltage Regulator 0.5A Positive
+F http://www.national.com/ds/LM/LM117.pdf
+$ENDCMP
+#
+$CMP MOS_N1
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP MOS_P1
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP MOSFET_P
+F transistors/mos/*.*
+$ENDCMP
+#
+$CMP PCI_EXP_64
+D Connecteur BUS PCI
+K PCI
+$ENDCMP
+#
+$CMP PS2561
+D PC817, DIP4, DC Optocoupler, Vce 35V, CTR 50-300%
+K NPN DC Optocoupler
+F http://www.soselectronic.cz/a_info/resource/d/pc817.pdf
+$ENDCMP
+#
+$CMP ZENERSMALL
+D Diode zener
+K DEV DIODE
+$ENDCMP
+#
+#End Doc Library
