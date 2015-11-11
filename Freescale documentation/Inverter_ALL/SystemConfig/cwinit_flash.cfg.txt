@@ -1,0 +1,26 @@
+#------------------------------------------------------------------------------
+#  MC56F8023 Initialization File for flash
+#------------------------------------------------------------------------------
+
+# Enable Reset on GPIO_A7
+writexmem16 0x00f153 0x80
+
+set_hfmclkd               0x27
+set_hfm_base              0xF400
+set_hfm_config_base       0x7FF7
+
+# faster flash via on-board programmer (may want to disable if shared X & P memory in conflict)
+set_hfm_programmer_base   0x8700
+set_hfm_prog_buffer_base  0x0000
+set_hfm_prog_buffer_size  512
+
+# add_hfm_unit <startAddr> <endAddr> <bank> <numSectors> <pageSize> <progMem> <boot> <interleaved>
+add_hfm_unit     0x4000    0x7FFF    0      32           256        1         0       0
+
+# if you want to verify flash
+# please uncomment the following line
+#set_hfm_verify_program 1
+
+# if you want to unlock the flash everytime you connect, 
+# please uncomment the following line
+#unlock_flash_on_connect 1

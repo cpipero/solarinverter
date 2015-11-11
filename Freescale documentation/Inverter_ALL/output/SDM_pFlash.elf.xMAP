@@ -1,0 +1,206 @@
+# Link map of FStart
+
+# Unreferenced symbols:
+	(arch.c )	[whole file]
+	(cmp.c )	[whole file]
+	(dac.c )	[whole file]
+	(iic.c )	[whole file]
+	(occs.c )	[whole file]
+	(spi.c )	[whole file]
+	(scibl.c )	[whole file]
+	(scibf.c )	[whole file]
+	(spibl.c )	[whole file]
+	(freemaster_appcmd.c )	[whole file]
+	(freemaster_rec.c )	[whole file]
+	(freemaster_tsa.c )	[whole file]
+	(freemaster_pipes.c )	[whole file]
+	(GFLIB_SinLutAsm.c )	[whole file]
+
+
+#>00000001          F_Linternal_RAM_addr (linker command file)
+#>000007DF          F_Linternal_RAM_size (linker command file)
+
+# .interrupt_vectors
+  00004000 00000080 interrupt_vectors.text Fint_vec	(vectors.c)
+#>00004000          F_Linterrupt_vectors_addr (linker command file)
+
+# .executing_code
+  00004080 00000001 .text   FuserPreMain	(appconfig.c)
+  00004081 00000002 .text   FuserPostMain	(appconfig.c)
+  00004083 00000008 .text   Funhandled_interrupt	(vectors.c)
+  0000408B 00000003 .text   Fill_op	(vectors.c)
+  0000408E 00000003 .text   Fhws_overflow	(vectors.c)
+  00004091 00000003 .text   Fmisalign	(vectors.c)
+  00004094 00000003 .text   Fpll_losslock	(vectors.c)
+  00004097 00000095 .text   FStart	(startup.c)
+  0000412C 00000254 .text   Fmain	(Inverter_DEMO_main.c)
+  00004380 00000127 .text   Fswi_isr	(Inverter_DEMO_main.c)
+  000044A7 00000077 .text   FPwmReloadIsr	(Inverter_DEMO_main.c)
+  0000451E 0000002E .text   FFaultIsr	(Inverter_DEMO_main.c)
+  0000454C 00000011 .text   FPIT0_isr	(Inverter_DEMO_main.c)
+  0000455D 00000057 .text   FPWM_Init	(Inverter_DEMO_main.c)
+  000045B4 0000002A .text   FInit_Variables	(Inverter_DEMO_main.c)
+  000045DE 0000001B .text   FControllersInit	(Inverter_DEMO_main.c)
+  000045F9 0000003D .text   FCntrlSwitchTest	(Inverter_DEMO_main.c)
+  00004636 00000034 .text   FadcInit	(adc.c)
+  0000466A 00000055 .text   FgpioInit	(gpio.c)
+  000046BF 00000008 .text   FcopInit	(cop.c)
+  000046C7 0000001E .text   FintcInit	(intc.c)
+  000046E5 00000011 .text   FpitInit	(pit.c)
+  000046F6 0000003B .text   FpwmInit	(pwm.c)
+  00004731 00000020 .text   FqtInit	(qtimer.c)
+  00004751 00000014 .text   FsciInit	(sci.c)
+  00004765 00000023 .text   FsysInit	(sys.c)
+  00004788 00000005 .text   FFMSTR_Init	(freemaster_protocol.c)
+  0000478D 00000078 .text   FFMSTR_ProtocolDecoder	(freemaster_protocol.c)
+  00004805 00000038 .text   FFMSTR_GetBoardInfo	(freemaster_protocol.c)
+  0000483D 0000002F .text   FFMSTR_ReadMem	(freemaster_protocol.c)
+  0000486C 00000022 .text   FFMSTR_WriteMem	(freemaster_protocol.c)
+  0000488E 00000022 .text   FFMSTR_WriteMemMask	(freemaster_protocol.c)
+  000048B0 00000001 .text   FFMSTR_InitScope	(freemaster_scope.c)
+  000048B1 0000005F .text   FFMSTR_SetUpScope	(freemaster_scope.c)
+  00004910 00000035 .text   FFMSTR_ReadScope	(freemaster_scope.c)
+  00004945 00000009 .text   FFMSTR_InitSerial	(freemaster_serial.c)
+  0000494E 00000013 .text   FFMSTR_Listen	(freemaster_serial.c)
+  00004961 0000000B .text   FFMSTR_SendError	(freemaster_serial.c)
+  0000496C 0000004F .text   FFMSTR_SendResponse	(freemaster_serial.c)
+  000049BB 00000031 .text   FFMSTR_Tx	(freemaster_serial.c)
+  000049EC 00000091 .text   FFMSTR_Rx	(freemaster_serial.c)
+  00004A7D 0000002C .text   FFMSTR_ProcessSCI	(freemaster_serial.c)
+  00004AA9 00000003 .text   FFMSTR_Poll	(freemaster_serial.c)
+  00004AAC 00000013 .text   FFMSTR_CopyToBuffer	(freemaster_56F8xxx.c)
+  00004ABF 00000013 .text   FFMSTR_CopyFromBuffer	(freemaster_56F8xxx.c)
+  00004AD2 0000001C .text   FFMSTR_CopyFromBufferWithMask	(freemaster_56F8xxx.c)
+  00004AEE 00000006 .text   FFMSTR_SetExAddr	(freemaster_56F8xxx.c)
+  00004AF4 00000025 .text   FFMSTR_AddressFromBuffer	(freemaster_56F8xxx.c)
+  00004B19 00000019 .text   FGFLIB_Sin12TlrFAsm	(GFLIB_SinCosTlrAsm.c)
+  00004B32 00000019 .text   FGFLIB_ControllerPIRecurrentLimFAsm	(GFLIB_ControllerPIRecurrentLIMAsm.c)
+  00004B4B 00000042 rtlib.text rtlib.text	(Runtime 56800E.lib save_reg.o     )
+  00004B4B 00000000 rtlib.text INTERRUPT_SAVEALL	(Runtime 56800E.lib save_reg.o     )
+  00004B6E 00000000 rtlib.text INTERRUPT_RESTOREALL	(Runtime 56800E.lib save_reg.o     )
+
+# .p_flash_ROM_data
+#>00004B8D          _datap_ROM_addr (linker command file)
+
+# .pmemdata_image
+#>000087E0          _datap_RAM_addr (linker command file)
+#>000087E0          _datap_RAM_end (linker command file)
+#>00000000          _datap_size (linker command file)
+#>00004B8D          _data_ROM_addr (linker command file)
+
+# .pmemdata
+#>000087E0          _BSSP_START (linker command file)
+#>000087E0          _BSSP_END (linker command file)
+
+# .data_image
+#>00000001          _data_RAM_addr (linker command file)
+  00000001 00000005 .data   FgudtSin12CoefTable	(GFLIB_SinCosTlrDefAsm.c)
+#>00000006          _data_RAM_end (linker command file)
+#>00000005          _data_size (linker command file)
+
+# .data
+#>00000006          _BSS_START (linker command file)
+  00000006 00000006 .bss    FsPwmIndep	(Inverter_DEMO_main.c)
+  0000000C 0000000A .bss    FsPirLimDCBusParams	(Inverter_DEMO_main.c)
+  00000016 00000001 .bss    Ff16ACZeroIavg	(Inverter_DEMO_main.c)
+  00000017 00000001 .bss    Ff16ACZeroUavg	(Inverter_DEMO_main.c)
+  00000018 00000001 .bss    Ff16ACZeroI	(Inverter_DEMO_main.c)
+  00000019 00000001 .bss    Ff16PowerImaxS	(Inverter_DEMO_main.c)
+  0000001A 00000001 .bss    Ff16PowerImax_Sn	(Inverter_DEMO_main.c)
+  0000001B 00000001 .bss    Ff16PowerImax_Sp	(Inverter_DEMO_main.c)
+  0000001C 00000001 .bss    Ff16ACZeroU	(Inverter_DEMO_main.c)
+  0000001D 00000001 .bss    Ff16PowerUmaxS	(Inverter_DEMO_main.c)
+  0000001E 00000001 .bss    Ff16PowerUmax_Sn	(Inverter_DEMO_main.c)
+  0000001F 00000001 .bss    Ff16PowerUmax_Sp	(Inverter_DEMO_main.c)
+  00000020 00000001 .bss    Ff16UmaxP	(Inverter_DEMO_main.c)
+  00000021 00000001 .bss    Ff16UmaxN	(Inverter_DEMO_main.c)
+  00000022 00000001 .bss    Ff16DCBAvg	(Inverter_DEMO_main.c)
+  00000023 00000001 .bss    Ff16DCBVoltSet	(Inverter_DEMO_main.c)
+  00000024 00000001 .bss    Ff16ImaxP	(Inverter_DEMO_main.c)
+  00000025 00000001 .bss    Ff16ImaxN	(Inverter_DEMO_main.c)
+  00000026 00000001 .bss    Ff16Ipower	(Inverter_DEMO_main.c)
+  00000027 00000001 .bss    Ff16Upower	(Inverter_DEMO_main.c)
+  00000028 00000001 .bss    Ff16PowerImax	(Inverter_DEMO_main.c)
+  00000029 00000001 .bss    Ff16PowerUmax	(Inverter_DEMO_main.c)
+  0000002A 00000001 .bss    Ff16DeltaInPower	(Inverter_DEMO_main.c)
+  0000002B 00000001 .bss    Ff16INpower1	(Inverter_DEMO_main.c)
+  0000002C 00000001 .bss    Ff16INpower	(Inverter_DEMO_main.c)
+  0000002D 00000001 .bss    Ff16Iin	(Inverter_DEMO_main.c)
+  0000002E 00000001 .bss    Ff16Uin	(Inverter_DEMO_main.c)
+  0000002F 00000001 .bss    Ff16PowerIef	(Inverter_DEMO_main.c)
+  00000030 00000001 .bss    Ff16PowerUef	(Inverter_DEMO_main.c)
+  00000031 00000001 .bss    Fmf16DCBusControllerOutput	(Inverter_DEMO_main.c)
+  00000032 00000001 .bss    Ff16PWMOutput	(Inverter_DEMO_main.c)
+  00000033 00000001 .bss    Ff16AmplValue	(Inverter_DEMO_main.c)
+  00000034 00000001 .bss    Ff16QT3Delay	(Inverter_DEMO_main.c)
+  00000035 00000001 .bss    Ff16sinusVal	(Inverter_DEMO_main.c)
+  00000036 00000001 .bss    Ff16angleInc	(Inverter_DEMO_main.c)
+  00000037 00000001 .bss    Ff16angle	(Inverter_DEMO_main.c)
+  00000038 00000001 .bss    Fu16LoopSwitch1Cnt	(Inverter_DEMO_main.c)
+  00000039 00000001 .bss    Fu16LoopCnt	(Inverter_DEMO_main.c)
+  0000003A 00000001 .bss    Fu16ImaxSavedn	(Inverter_DEMO_main.c)
+  0000003B 00000001 .bss    Fu16ImaxSavedp	(Inverter_DEMO_main.c)
+  0000003C 00000001 .bss    Fu16UmaxSavedn	(Inverter_DEMO_main.c)
+  0000003D 00000001 .bss    Fu16UmaxSavedp	(Inverter_DEMO_main.c)
+  0000003E 00000001 .bss    Fu16Fault	(Inverter_DEMO_main.c)
+  0000003F 00000001 .bss    Fu8AmplStatus	(Inverter_DEMO_main.c)
+  00000040 00000001 .bss    Fu8sine_crossH	(Inverter_DEMO_main.c)
+  00000040 00000001 .bss    Fu8sine_crossL	(Inverter_DEMO_main.c)
+  00000041 00000001 .bss    Fu8StartSwitch	(Inverter_DEMO_main.c)
+  00000041 00000001 .bss    Fu8StartPWM_P	(Inverter_DEMO_main.c)
+  00000042 00000001 .bss    Fu8OutGenState	(Inverter_DEMO_main.c)
+  00000042 00000001 .bss    Fu8PWM_B_state	(Inverter_DEMO_main.c)
+  00000043 00000001 .bss    Fu8PWM_S_state	(Inverter_DEMO_main.c)
+  00000043 00000001 .bss    Fu8PWM_P_state	(Inverter_DEMO_main.c)
+  00000044 00000004 .bss    Fpcm_pScopeVarSize	(freemaster_scope.c)
+  00000048 00000008 .bss    Fpcm_pScopeVarAddr	(freemaster_scope.c)
+  00000050 00000001 .bss    Fpcm_nScopeVarCount	(freemaster_scope.c)
+  00000051 00000001 .bss    Fpcm_nRxCheckSum	(freemaster_serial.c)
+  00000051 00000001 .bss    Fpcm_pRxBuff	(freemaster_serial.c)
+  00000052 00000001 .bss    Fpcm_pTxBuff	(freemaster_serial.c)
+  00000053 00000001 .bss    Fpcm_nRxTodo	(freemaster_serial.c)
+  00000054 00000001 .bss    Fpcm_nTxTodo	(freemaster_serial.c)
+  00000055 00000001 .bss    Fpcm_wFlags	(freemaster_serial.c)
+  00000056 0000000C .bss    Fpcm_pCommBuffer	(freemaster_serial.c)
+  00000062 00000001 .bss    Fpcm_bUseExAddr	(freemaster_56F8xxx.c)
+#>00000063          _BSS_END (linker command file)
+#>00000064          _HEAP_ADDR (linker command file)
+#>00000000          _HEAP_SIZE (linker command file)
+#>00000064          _HEAP_END (linker command file)
+#>00000100          _min_stack_size (linker command file)
+#>00000064          _stack_addr (linker command file)
+#>00000164          _stack_end (linker command file)
+#>00000064          F_heap_addr (linker command file)
+#>00000064          F_heap_end (linker command file)
+#>00000064          F_Lstack_addr (linker command file)
+#>00000006          F_Lbss_start (linker command file)
+#>00000063          F_Lbss_end (linker command file)
+#>0000005D          F_Lbss_size (linker command file)
+#>000087E0          F_Lbssp_start (linker command file)
+#>000087E0          F_Lbssp_end (linker command file)
+#>00000000          F_Lbssp_size (linker command file)
+#>00004B8D          F_Ldata_ROM_addr (linker command file)
+#>00000001          F_Ldata_RAM_addr (linker command file)
+#>00000005          F_Ldata_size (linker command file)
+#>00004B8D          F_Ldatap_ROM_addr (linker command file)
+#>000087E0          F_Ldatap_RAM_addr (linker command file)
+#>00000000          F_Ldatap_size (linker command file)
+#>0000F000          FArchIO (linker command file)
+
+
+# Memory map:
+  v_addr   p_addr   size     name
+  00004000 00004000 00000080 .p_flash_ROM
+  00004080 00004080 00000B0D .p_flash_ROM
+  00004B8D 00004B8D 00000000 .p_flash_ROM
+  00008000 00008000 00000800 .p_all_internal_RAM
+  00000000 00000000 00000800 .x_all_internal_RAM
+  000087E0 000087E0 00000000 .p_internal_RAM
+  000087E0 000087E0 00000000 .p_internal_RAM
+  00000001 00000001 00000163 .x_internal_RAM
+  00004B8D 00000001 00000005 .p_internal_RAM_ximage
+  0000F000 0000F000 00001000 .x_onchip_peripherals
+  00FFFF00 00FFFF00 00000100 .x_EOnCE
+
+# Link start time: Wed Mar 30 14:39:27 2011
+# Link end time: Wed Mar 30 14:39:27 2011
